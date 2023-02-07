@@ -1,0 +1,279 @@
+{% block content %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability Starter Kit</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+
+    .carousel-item img{
+      object-fit: cover;
+      object-position: center;
+      height: 60vh;
+      overflow: hidden;
+    } 
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-4 pb-2">
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="#intro">
+        <span class="blockquote">
+          <i class="bi bi-globe-americas mx-2"></i>
+          Sustainability Starter Kit
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#topics">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-outline-secondary py-2 px-4" href="#pricing">Buy Now</a>
+          </li>     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main image & intro text -->
+  <section id="intro" class="mt-4">
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+          <div class="carousel-inner align-center">
+            <div class="carousel-item active">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/1.webp')}}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/2.webp')}}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/3.webp')}}" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/4.webp')}}" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/5.webp')}}" alt="Fifth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block h-75 w-100 " src="{{url_for('static', filename='images/6.webp')}}" alt="Sixth slide">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- pricing plans -->
+  <section id="pricing" class="bg-light mt-5">
+    <div class="container-lg my-5">
+      <div class="text-center">
+        <h1 class="display-5">Buy Now....!</h1>
+        <p class="lead pt-2">This starter kit is all you need to start the revolution</p>
+      </div>
+
+      <div class="row my-5 g-0 align-items-center">
+        <div class="col col-md-4">
+          <div class="card border-secondary border-2">
+            <div class="card-header text-center text-dark bg-light">What's in the Kit ?</div>
+            <div class="card-body text-muted mt-2">
+              <ul class="list-styled blockquote lh-lg text-start">
+                <li>1 Plant Based Reusable Cup With 2 Lids</li>
+                <li>2 Bamboo Straws</li>
+                <li>1 Box of 50 Bamboo Cotton Eartips</li>
+                <li>1 Bamboo Toothbrush</li>
+                <li>1 Natural Loofah</li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md text-center py-5 text-md-end">
+          <h1>
+            <div class="display-4">£ 10.99</div>
+            <div class="display-5 text-muted">Sustainability Starter Kit</div>
+          </h1>
+          <a href="#pricing" class="btn btn-secondary btn-lg my-3 px-4 mx-3">Buy Now</a>
+          <a href="#pricing" class="btn btn-outline-secondary btn-lg">Add to Cart</a>
+        </div>
+      
+      </div>
+    </div><!-- end container -->
+  </section>
+
+  <!-- Products at a glance -->
+  <section id="topics">
+    <div class="container-md my-5">
+      <div class="text-center">
+        <h2>About Us</h2>
+        <p class="lead text-muted"><i class="bi bi-globe-americas mx-2"></i>Earthly Sustainable Solutions</p>
+      </div>
+      <div class="row my-5 g-5 justify-content-around align-items-center">
+
+        <div class="col-lg-6">
+          
+          <!-- accordion -->
+          <div class="accordion" id="products">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="item -1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#product-1" aria-expanded="true" aria-controls="product-1">
+                  1. Plant Based Reusable Cup
+                </button>
+              </h2>
+              <div id="product-1" class="accordion-collapse collapse show" aria-labelledby="item  -1" data-bs-parent="#products">
+                <div class="accordion-body">
+                  <p>This reusable cup is made from sustainable and eco-friendly materials, perfect for those looking to reduce their environmental impact. The plant-based material is not only better for the planet but also safe for your health as it does not contain any harmful chemicals. With a leak-proof lid and durable design</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="item -2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-2" aria-expanded="false" aria-controls="product-2">
+                  2. Bamboo Straws
+                </button>
+              </h2>
+              <div id="product-2" class="accordion-collapse collapse" aria-labelledby="item -2" data-bs-parent="#products">
+                <div class="accordion-body">
+                  <p> Made from 100% natural, sustainable bamboo, these straws are not only good for the environment but also safe for you and your family. They are reusable, durable and easy to clean, making them a great addition to any kitchen or home. Whether you’re drinking a smoothie, soda, or cocktail, these bamboo straws are the perfect choice. Say goodbye to wasteful plastic and switch to our Bamboo Straws today!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="item -3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-3" aria-expanded="false" aria-controls="product-1">
+                  3. Bamboo Toothbrush
+                </button>
+              </h2>
+              <div id="product-3" class="accordion-collapse collapse" aria-labelledby="item -3" data-bs-parent="#products">
+                <div class="accordion-body">
+                  <p>Our Bamboo Toothbrush is the perfect choice for those looking to reduce their environmental impact. Made from sustainably grown bamboo, it is a biodegradable alternative to traditional plastic toothbrushes. The bamboo handle is not only environmentally friendly, but it is also comfortable to hold and easy to use. The soft bristles are gentle on your teeth and gums, making it a great choice for all ages. So, ditch plastic and switch to our Bamboo Toothbrush today for a brighter smile and a greener planet!</p>                
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="item -4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-4" aria-expanded="false" aria-controls="product-4">
+                  4. Natural Loofah
+                </button>
+              </h2>
+              <div id="product-4" class="accordion-collapse collapse" aria-labelledby="item -4" data-bs-parent="#products">
+                <div class="accordion-body">
+                  <p>Our Natural Loofah is an eco-friendly and sustainable alternative to synthetic scrubbers. Made from 100% natural plant fibers, it is gentle on your skin and tough on dirt and grime. The loofah is perfect for exfoliating and removing dead skin cells, leaving you with a refreshed and revitalized complexion. Its natural and renewable materials make it a more sustainable choice for your home and the planet. Say goodbye to plastic scrubbers and switch to our Natural Loofah today!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="item -5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-5" aria-expanded="false" aria-controls="product-5">
+                  5. Bamboo Cotton Eartips
+                </button>
+              </h2>
+              <div id="product-5" class="accordion-collapse collapse" aria-labelledby="item -5" data-bs-parent="#products">
+                <div class="accordion-body">
+                  <p>Our Bamboo Cotton Ear Tips are the perfect choice for those looking for an eco-friendly and sustainable alternative to traditional cotton swabs. Made from bamboo and cotton, these ear tips are biodegradable and compostable, making them a better choice for the environment. The soft cotton is gentle on your ears and the flexible bamboo handle is easy to use. With a pack of 100 ear tips, you can make a sustainable choice without sacrificing convenience. Make the switch to our Bamboo Cotton Ear Tips today!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- contact form -->
+  <!-- form-control, form-label, form-select, input-group, input-group-text -->
+  <section id="contact">
+    <div class="container-lg my-5">
+      
+      <div class="text-center">
+        <h2>Get in Touch</h2>
+        <p class="lead">Questions to Ask? Fill out the form to Contact Us directly...</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <form action="#" method="POST">
+            <label for="email" class="form-label">Email address:</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="text" id="email" class="form-control" placeholder="Example: santhoshkan205@gmail.com" />
+            </div>
+            <label for="name" class="form-label">Name:</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-person-fill text-secondary"></i>
+              </span>
+              <input type="text" name="user" id="name" class="form-control" placeholder="Example: S.S.Santhosh Sivan" />
+            </div>
+            <div class="mb-3 mt-5 form-floating">
+              <textarea class="form-control" name="query" id="query" style="height: 140px" placeholder="query"></textarea>
+              <label for="query">Your query :-</label>
+            </div>
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- get updates / modal trigger -->
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+  </script>
+</body>
+</html> 
+
+{% endblock content %}
